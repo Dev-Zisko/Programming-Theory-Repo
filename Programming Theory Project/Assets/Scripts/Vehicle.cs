@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class Parent (INHERIT)
 public class Vehicle : MonoBehaviour
 {
     protected int _year;
     protected string _color;
     protected string _brand;
 
+    // ENCAPSULATION
     public int year
     {
         get
@@ -23,6 +25,7 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    // ENCAPSULATION
     public string color
     {
         get
@@ -35,6 +38,7 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    // ENCAPSULATION
     public string brand
     {
         get
@@ -47,16 +51,22 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    // Method Original (POLYMORPHISM)
+    // ABSTRACTION
     public void Move(Vector3 position)
     {
         Debug.Log("I am a vehicle, I can move free.");
     }
 
+    // Method Original (POLYMORPHISM)
+    // ABSTRACTION
     public virtual void TurnOn()
     {
         Debug.Log("I am a vehicle. My color is: " + _color + " and my brand is: " + _brand + ".");
     }
 
+    // Method Original (POLYMORPHISM)
+    // ABSTRACTION
     public virtual void TurnOff()
     {
         Debug.Log("Vehicle off.");
