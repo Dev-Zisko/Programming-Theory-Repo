@@ -12,33 +12,25 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vehicle = new Vehicle
-        {
-            year = 1995,
-            color = "Red",
-            brand = "Ford"
-        };
+        vehicle = gameObject.AddComponent<Vehicle>();
+        vehicle.year = 1995;
+        vehicle.color = "Red";
+        vehicle.brand = "Ford";
 
-        car = new Car
-        {
-            year = 1997,
-            color = "Yellow",
-            brand = "Chevrolet"
-        };
+        car = gameObject.AddComponent<Car>();
+        car.year = 1997;
+        car.color = "Yellow";
+        car.brand = "Chevrolet";
 
-        plane = new Plane
-        {
-            year = 2018,
-            color = "Gray",
-            brand = "Boeing 737"
-        };
+        plane = gameObject.AddComponent<Plane>();
+        plane.year = 2018;
+        plane.color = "Gray";
+        plane.brand = "Boeing 737";
 
-        boat = new Boat
-        {
-            year = 2015,
-            color = "White",
-            brand = "Bennington"
-        };
+        boat = gameObject.AddComponent<Boat>();
+        boat.year = 2015;
+        boat.color = "White";
+        boat.brand = "Bennington";
 
         vehicle.Move(new Vector2(0, 0));
         vehicle.TurnOn();
@@ -57,9 +49,4 @@ public class GameManager : MonoBehaviour
         boat.TurnOff();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
